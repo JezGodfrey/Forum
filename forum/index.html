@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <h3>Welcome to the forum!</h3>
+      <hr class="divider"></hr>
+      {{range .Forum}}
+      <a href="http://localhost:8080/viewforum?sub={{.Sub}}" style="text-decoration: none;">
+        <div class="post">
+          <div class="topic-title" style="font-size: 22px">{{.Name}}</div>
+          <p>Topics: {{.Topics}}, Posts: {{.Posts}}</p>
+        </div>
+      </a>
+      {{end}}
+    <div class="online">
+      <span class="wrapme">Users online: {{range .Sessions}}<span class="author">{{.}}</span>, {{end}}</span>
+    </div>
+  </body>
+</html>

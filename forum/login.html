@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <h3>Login:</h3>
+      <hr class="divider"></hr>
+      <form class="form" action="/logging" method="post">
+          <p>Please enter a username and password:</p>
+          <label for="username">Username:</label>
+          <input id="username" type="text" name="myName" placeholder="Username"><br><br>
+          <label for="password">Password:</label>
+          <input id="password" type="password" name="myPass" placeholder="Password">
+          <label for="remember">
+            Remember me: 
+            <input id="remember" type="checkbox" name="myMem" value="1">
+          </label>
+          <input class="button" type="submit">
+      </form>
+    </div>
+  </body>
+</html>

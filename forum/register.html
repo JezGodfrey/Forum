@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <h3>Registration:</h3>
+      <hr class="divider"></hr>
+      <form class="form" action="/registration" method="post">
+        <p>Please enter the following details:</p>
+        <label for="email">Email:</label>
+        <input id="email" type="text" name="myMail" placeholder="user@forum.com"><br><br>
+        <label for="username">Username:</label>
+        <input id="username" type="text" name="myName" placeholder="Username"><br><br>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="myPass" placeholder="Password">
+        <ul>
+          <li>Email must be a valid email address</li>
+          <li>Username is case-sensitive, must be 1-20 characters, and contain only letters, numbers, and underscores</li>
+          <li>Password must be 4-30 characters</li>
+        </ul>
+        <input class="button" type="submit">
+      </form>
+    </div>
+  </body>
+</html>

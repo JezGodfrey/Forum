@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post a {{.Mode}} | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h2>Forum</h2>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/viewforum?sub={{.Sub}}">Sub</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <p>Post a {{.Mode}}:</p>
+      <form class="form" action="/post" method="post">
+        <input id="post-mode" type="hidden" name="topMode" value="{{.Mode}}">
+        <input id="post-sub" type="hidden" name="topSub" value={{.Sub}}>
+        <input id="post-id" type="hidden" name="topTid" value="{{.Tid}}">
+        <label for="topName">Subject: </label>
+        <input id="post-name" type="text" name="topName" value="{{.Reply}}">
+        <label for="category">Category: </label>
+        {{range .Filters}}
+        <input id="category" type="checkbox" name="{{.Value}}" value="{{.Value}}"> {{.Name}}
+        {{end}}<br><br>
+        <label for="post-content">Content: </label>
+        <textarea id="post-content" type="textarea" name="topContent" rows="10" cols="100"></textarea>
+        <input class="button" type="submit">
+      </form>
+    </div>
+  </body>
+</html>

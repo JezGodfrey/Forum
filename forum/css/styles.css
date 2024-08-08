@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #1d976c, #93f9b9);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-size: 3.5em; /* Increased font size */
+    margin: 0;
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+    position: relative;
+    top: -20px; /* Adjusted to move the forum title slightly lower */
+    z-index: 1;
+}
+
+.head {
+    background-color: #20232a; 
+    color: white;
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+    border-bottom: 5px solid #61dafb; 
+    font-size: 1.2em; /* Reduced font size */
+    height: 60px; /* Reduced height */
+    background: url('your-banner-image-url') no-repeat center center; /* Replace with your banner image URL */
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -10px; /* Adjusted to account for h1 positioning */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #61dafb; /* Light blue */
+    border-bottom: 3px solid #20232a; /* Dark gray */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -10px; /* Adjusted to account for h1 positioning */
+}
+
+.menu a {
+    padding: 15px 20px; /* Increased padding */
+    margin: 0 10px; /* Increased margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #20232a; 
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold; /* Make the menu items bold */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu a:hover {
+    background-color: #ffeb3b; 
+    color: #20232a; 
+    border-color: #ffeb3b; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.page {
+    padding: 15px; /* Reduced padding */
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #282c34; 
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.form input[type="text"], .form input[type="password"], .form textarea {
+    width: calc(100% - 22px);
+    padding: 10px; /* Reduced padding */
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #444;
+    color: #f0f0f0;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+.form input[type="text"]:hover, .form input[type="password"]:hover, .form textarea:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.button-home {
+    display: block;
+    width: 180px; /* Reduced width */
+    margin: 15px auto; /* Reduced margin */
+    padding: 10px; /* Reduced padding */
+    background-color: #61dafb;
+    color: #20232a; 
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-home:hover {
+    background-color: #ffeb3b; 
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+h3, a, label {
+    color: #ffeb3b; 
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold; /* Make h3, a, and label bold */
+}
+
+h3 {
+    margin-top: 0;
+}
+
+a:hover {
+    color: #ffeb3b; 
+    text-decoration: underline;
+}
+
+.divider {
+    border-top: 1px solid #888;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.post {
+    border: 2px solid #61dafb; 
+    border-radius: 15px;
+    padding: 15px; /* Reduced padding */
+    margin: 15px 0; /* Reduced margin */
+    background-color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.content {
+    padding-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.wrapme {
+    word-wrap: break-word;
+}
+
+.button {
+    background-color: #61dafb; 
+    color: #20232a; 
+    border: none;
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em; /* Increased font size */
+}
+
+.button:hover {
+    background-color: #ffeb3b; 
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.page-button {
+    position: relative;
+    padding: 10px; /* Increased padding */
+    background-color: #9b9b9b;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.page-button:hover {
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.filters {
+    padding-top: 1px;
+    padding-bottom: 15px;
+}
+
+.filter-button {
+    padding: 10px; /* Increased padding */
+    background-color: #61dafb; 
+    color: #20232a; 
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em; /* Increased font size */
+}
+
+.filter-button:hover {
+    background-color: #ffeb3b; /* Bright yellow */
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+span {
+    white-space: pre;
+}
+
+.post-title {
+    color: #ffeb3b; 
+    font-weight: bold;
+    font-size: 1.2em; /* Increased font size */
+    margin-top: -0.5px;
+}
+
+.post-details {
+    position: relative;
+    top: -10px;
+    display: inline-flex;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.author {
+    font-weight: bold;
+    color: #ff6347; 
+}
+
+button.like, button.dislike {
+    background-color: #61dafb; 
+    color: #20232a; 
+    border: none;
+    padding: 10px; /* Increased padding */
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em; /* Increased font size */
+}
+
+button.like:hover, button.dislike:hover {
+    background-color: #ffeb3b; 
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.topic-title a {
+    text-decoration: none;
+    transition: color 0.2s;
+    color: #61dafb; 
+    font-size: 1.2em; /* Increased font size */
+    font-weight: bold; /* Make the topic titles bold */
+}
+
+.topic-title a:hover {
+    color: #ffeb3b; 
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Forum section styling */
+.forum-section {
+    background-color: #fffbf0;
+    padding: 15px; /* Reduced padding */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    top: -30px; /* Adjusted to move the forum section slightly lower */
+}
+
+.forum-title {
+    color: #ff6347; 
+    font-size: 3.5em; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.forum-post {
+    border: 1px solid #ddd;
+    padding: 15px; 
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forum-post:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.forum-post-title {
+    color: #ff6347; 
+    font-weight: bold;
+    font-size: 1.2em; 
+}
+
+.forum-post-content {
+    color: #666;
+    font-size: 1em;
+}
+
+.forum-author {
+    color: #ff6347; 
+    font-weight: bold;
+}
+

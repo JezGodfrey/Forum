@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{.Name}} | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/viewforum?sub={{.Sub}}">{{.SubName}}</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <h3>{{.Name}}</h3>
+      <div class="wrapme">
+        <a class="button" href="http://localhost:8080/posting?t={{.Tid}}&sub={{.Sub}}&mode=reply">Post Reply</a> - {{.Count}} posts - 
+        {{range .Pages}}
+        <a class="page-button" href="http://localhost:8080/viewthread?t={{$.Tid}}&sub={{$.Sub}}{{.StartPost}}">{{.}}</a>
+        {{end}}
+      </div>
+      <div>
+        {{range .Posts}}
+        <div id="post-{{.Pid}}" class="post" data-top-id="{{$.Tid}}" data-post-id="{{.Pid}}">
+            <p class="post-title">{{.Title}}</p>
+            <span class="post-details">by <span class="author">{{.Author}}</span> - {{.Date}}</span>
+            <p class="content">{{.Content}}</p>
+            <hr class="divider"></hr>
+            <button class="like">Like</button>
+            <button class="dislike">Dislike</button>
+            <span id="likes-{{.Pid}}">{{.Likes}}</span> Likes
+            <span id="dislikes-{{.Pid}}">{{.Dislikes}}</span> Dislikes
+        </div>
+        {{end}}
+      </div>
+      <div class="wrapme">
+        <a class="button" href="http://localhost:8080/posting?t={{.Tid}}&sub={{.Sub}}&mode=reply">Post Reply</a> - {{.Count}} posts - 
+        {{range .Pages}}
+        <a class="page-button" href="http://localhost:8080/viewthread?t={{$.Tid}}&sub={{$.Sub}}{{.StartPost}}">{{.}}</a>
+        {{end}}
+      </div>
+    </div>
+    <a class="button-home" href="http://localhost:8080/">Home</a>
+    <script src="forum/js/like_dislike.js"></script>
+  </body>
+</html>

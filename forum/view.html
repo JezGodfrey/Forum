@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{.SubName}} | Forum</title>
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <h3>Welcome to {{.SubName}}!</h3>
+      <hr class="divider"></hr>
+      <div class="filters">
+        <p>Filters:
+        {{range .Filters}}
+        <a id="{{.Value}}" class="filter-button" href="http://localhost:8080/viewforum?sub={{$.Sub}}&cat={{.Value}}">{{.Value}}</a>
+        {{end}}
+        <a id="USER" class="filter-button" href="http://localhost:8080/viewforum?sub={{$.Sub}}&cat=USER">My Topics</a>
+        <a id="LIKE" class="filter-button" href="http://localhost:8080/viewforum?sub={{$.Sub}}&cat=LIKE">Liked</a>
+        <a id="RES" class="filter-button" href="http://localhost:8080/viewforum?sub={{.Sub}}">Reset</a>
+        </p>
+      </div>
+      <div class="wrapme">
+        <a class="button" href="http://localhost:8080/posting?sub={{.Sub}}&mode=topic">New Topic</a> - {{.Count}} topics - 
+        {{range .Pages}}
+        <a class="page-button" href="http://localhost:8080/viewforum?sub={{$.Sub}}{{.StartTopic}}">{{.}}</a>
+        {{end}}
+      </div>
+      <h2>Topics</h2>
+      {{range .Posts}}
+      <div id="post-{{.Pid}}" class="post" data-top-id="{{.Tid}}" data-post-id="{{.Pid}}">
+        <div class="topic-title"><a href="http://localhost:8080/viewthread?t={{.Tid}}&sub={{$.Sub}}" style="font-size: 22px">{{.Title}}</a></div>
+        <pre>({{.Categories}}) Thread by {{.Author}} >> {{.Date}} Replies: {{.Content}}</pre>
+        <button class="like">Like</button>
+        <button class="dislike">Dislike</button>
+        <span id="likes-{{.Pid}}">{{.Likes}}</span> Likes
+        <span id="dislikes-{{.Pid}}">{{.Dislikes}}</span> Dislikes
+      </div>
+      {{end}}
+      <div class="wrapme">
+        <a class="button" href="http://localhost:8080/posting?sub={{.Sub}}&mode=topic">New Topic</a> - {{.Count}} topics - 
+        {{range .Pages}}
+        <a class="page-button" href="http://localhost:8080/viewforum?sub={{$.Sub}}{{.StartTopic}}">{{.}}</a>
+        {{end}}
+      </div>
+    </div>
+    <a class="button-home" href="http://localhost:8080/">Home</a>
+    <script src="forum/js/like_dislike.js"></script>
+  </body>
+</html>

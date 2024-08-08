@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Info | Forum</title>
+    <meta http-equiv="refresh" content="5;url=http://localhost:8080/{{.Red}}" />
+    <link rel="stylesheet" href="forum/css/styles.css">
+  </head>
+  <body>
+    <div class="head">
+      <h1>Forum</h1>
+    </div>
+    <div class="menu">
+      <a class="home" href="http://localhost:8080/">Home</a>
+      <a href="http://localhost:8080/register.html">Register</a>
+      <a href="http://localhost:8080/login.html">Login</a>
+      <a href="http://localhost:8080/logout">Logout</a>
+    </div>
+    <div class="page">
+      <p style="font-size: 22px">Information</p>
+      <hr class="divider"></hr>
+      <p style="font-size: 18px">{{.Msg}}</p>
+      <p>Redirecting to <a href="http://localhost:8080/{{.Red}}">{{.Dest}}</a> in 5 seconds...</p>
+      <hr class="divider"></hr>
+    </div>
+  </body>
+</html>
