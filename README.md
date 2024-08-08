@@ -45,3 +45,7 @@ docker container run -p 8080:8080 --detach --name forum forum-docker
 - Passwords are stored in the database after being encrypted with bcrypt
 - Javascript was not a requirement for the project, but was determined to be beneficial in fulfilling the requirement to implement a like/dislike system
 - All errors are funnelled through an error handler and displayed on an information page
+
+## Authors
+
+This program was written by Jez Godfrey as part of the 01 Founders fellowship
