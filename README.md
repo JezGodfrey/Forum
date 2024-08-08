@@ -14,10 +14,10 @@ go run .
 
 Then visit `localhost:8080` on your device. From the main page, you can navigate through the subforums (their respective topics and posts). In the navigation bar at the top, you can register, login and logout (if logged in!). Example images below:
 
-<img src="example/indexpage.PNG" width="500" height="400"/>
-<img src="example/registerpage.PNG" width="500" height="400"/>
-<img src="example/loggedin.PNG" width="500" height="400"/>
-<img src="example/thread.PNG" width="500" height="400"/>
+<img src="example/indexpage.PNG" width="400" height="300"/>
+<img src="example/registerpage.PNG" width="400" height="300"/>
+<img src="example/loggedin.PNG" width="400" height="300"/>
+<img src="example/thread.PNG" width="400" height="300"/>
 
 ## Running via Dockerfile
 
